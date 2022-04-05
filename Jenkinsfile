@@ -1,14 +1,10 @@
 
 pipeline {
-	agent { 
-	       docker {
-		   image 'node:latest'
-	       }
-	   }
+	agent any
 	stages {
 		stage('Clone Git Repo'){
 				steps{
-					git 'https://github.com/qaboxletstest/cypress-jenkins-demo.git'
+					git 'https://github.com/jijeesh/cypress-jenkins-demo.git'
 		    }
 		}
 		stage('Install Dependencies'){
